@@ -7,12 +7,25 @@ const Formacion =({data})=>{
 
 
     const[seleccion, setSeleccion] = useState("Javascript")
+    const[imagen , setImagen] = useState()
 
     const selectDisciplina =(e)=>{
         let disciplinaTarget = e.target.closest("div").id; // Id del DIV seleccionado. En base a este valor se setea la "seleccion"
         setSeleccion(disciplinaTarget)
-        // console.log(seleccion)
+        if(data){
+            let dataFiltrada =  data.filter(cer => cer.TAGS.includes(disciplinaTarget))
+                if(dataFiltrada[0]){
+                    setImagen(dataFiltrada[0].Imagen)
+                }else(
+                    setImagen("/placeholder")
+                )
+        }
+        
+
     }
+
+
+    
 
     return(
         <div className="SectionLO Formacion">
@@ -68,6 +81,7 @@ const Formacion =({data})=>{
                         miSeleccion={seleccion}
                         Seccion = ""
                         dataCertificados={data}
+                        imagen={imagen}
                     />
             </div>
         </div>
