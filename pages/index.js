@@ -16,7 +16,7 @@ const Home = ({certificados}) => {
 }
 
 export default Home
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const resp = await fetch(`https://portafolio-mu-three.vercel.app/api/certificados`)
   const certificados = await resp.json()
   return{
