@@ -1,16 +1,15 @@
 import Image from "next/image"
 import ListaDeContenidos from "./ListaDeContenidos"
 import Icono from "./Icono"
-import useFetch from "../Hooks/UseFetch"
 import { useState } from "react"
-import { losCertificados } from "../certificados"
 
 
-const PanelVistaPrevia =({ miSeleccion, Seccion})=>{
+const PanelVistaPrevia =({ miSeleccion, Seccion,dataCertificados})=>{
 
-    const certificados = useFetch('certificados');
+    const certificados = dataCertificados;
 
-    console.log(losCertificados)
+    dataCertificados && console.log(dataCertificados)
+
 
     const[imagenVisor, setImagenVisor] = useState("/nada.jpg")
     const [imagenesSeleccionables , setImagenesSeleccionables] =useState(null)

@@ -3,11 +3,12 @@ import Header from "../Componentes/Header"
 import MisDisenios from "../Componentes/MisDisenios"
 import QuienSoy from "../Componentes/QuienSoy"
 import SeccionContacto from "../Componentes/SeccionContacto"
-const Home = () => {
+
+const Home = ({certificados}) => {
   return ( <>
     <Header/>
     <QuienSoy/>
-    <Formacion/>
+    <Formacion data={certificados}/>
     <MisDisenios/>
     <SeccionContacto/>
     </>
@@ -15,3 +16,12 @@ const Home = () => {
 }
 
 export default Home
+export async function getStaticProps(){
+  const resp = await fetch(`https://portafolio-mu-three.vercel.app/api/certificados`)
+  const certificados = await resp.json()
+  return{
+    props:{
+      certificados
+    }
+  }
+}

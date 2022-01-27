@@ -3,7 +3,7 @@ import Disciplina from "../Moleculas/disciplina"
 import PanelVistaPrevia from "../Moleculas/PanelVistaPrevia"
 
 
-const Formacion =()=>{
+const Formacion =({data})=>{
 
 
     const[seleccion, setSeleccion] = useState(null)
@@ -67,6 +67,7 @@ const Formacion =()=>{
                     <PanelVistaPrevia 
                         miSeleccion={seleccion}
                         Seccion = ""
+                        dataCertificados={data}
                     />
             </div>
         </div>
