@@ -15,7 +15,7 @@ export default function handler(req, res) {
     ,
     {
       "Titulo"  : "Ajax y Web Sockets",
-      "Imagen"  :"/ImagenesCursos/AjaxYWebSocket.jpg",
+      "Imagen"  :"/ImagenesCursos/AjaxYWebSockets.jpg",
       "TAGS"  :["Javascript","FrontEnd","BackEnd","API"],
       "ID"    : 3
     },
@@ -27,7 +27,7 @@ export default function handler(req, res) {
     },
     {
       "Titulo"  : "Introduccion al Testing",
-      "Imagen"  :"/ImagenesCursos/IntroduccionAlTesting-png",
+      "Imagen"  :"/ImagenesCursos/IntroduccionAlTesting.png",
       "TAGS"  :["Testing","Herramientas de trabajo"],
       "ID"    : 5
     },
@@ -56,7 +56,7 @@ export default function handler(req, res) {
       "ID"    : 9
     },
     {
-      "Titulo"  : "Server Side Renderin con NEXT.js",
+      "Titulo"  : "Server Side Rendering con NEXT.js",
       "Imagen"  :"/ImagenesCursos/SSRenderingConNext.jpg",
       "TAGS"  :["Javascript","FrontEnd","ReactJs","DOM","VirtualDOM","NEXT"],
       "ID"    : 10

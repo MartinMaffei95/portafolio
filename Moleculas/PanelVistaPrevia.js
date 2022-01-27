@@ -57,7 +57,7 @@ const PanelVistaPrevia =({ miSeleccion, Seccion,dataCertificados})=>{
             <button className="CambiarImagen Right" onClick={siguienteCertificado}>  </button> */}
             { certificados ? (
                 <Image
-                    className="elemento_imagen"
+                    className="elemento_imagen__IMAGEN"
                     src={imagenVisor}
                     alt="i"
                     height={360}
