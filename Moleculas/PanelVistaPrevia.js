@@ -1,46 +1,55 @@
 import Image from "next/image"
 import ListaDeContenidos from "./ListaDeContenidos"
 import Icono from "./Icono"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 const PanelVistaPrevia =({ miSeleccion, Seccion,dataCertificados})=>{
 
     const certificados = dataCertificados;
 
-    dataCertificados && console.log(dataCertificados)
-
-
     const[imagenVisor, setImagenVisor] = useState("/nada.jpg")
-    const [imagenesSeleccionables , setImagenesSeleccionables] =useState(null)
+    const [indiceCertificado , setIndiceCertificado] =useState(0)
+   
+    let indiceIMG;
 
+    if(certificados){
+        let imagenesParaSeleccionar = certificados.filter(cer => cer.TAGS.includes(miSeleccion));
 
-    const setearCertificado =(curso)=>{
-        let imagen = curso;
-        let cert = certificados.filter(cer => cer.Titulo == curso);
-        let certificadoSeleccionado = cert[0].Imagen;
-        setImagenVisor(certificadoSeleccionado)
+        const modificarImg =(IndiceImagen)=>{
+            console.log(imagenesParaSeleccionar[IndiceImagen].Imagen)
+            setIndiceCertificado(IndiceImagen) //Se almacena ese INDICE en el estado
+            setImagenVisor(imagenesParaSeleccionar[IndiceImagen].Imagen) //Se modifica el estado de la imagen.
+        }
+
+        const setearCertificado =(curso)=>{
+            let cert = certificados.filter(cer => cer.Titulo == curso);
+            indiceIMG = imagenesParaSeleccionar.indexOf(cert[0]) //Obteniendo el indice seleccionado de la imagen
+            let ImagenCertificadoSel = imagenesParaSeleccionar[indiceIMG].Imagen //Obtengo imagen del certificado con indice seleccionado
+            if(indiceCertificado >= imagenesParaSeleccionar.length-1){
+                indiceIMG = 0
+            }
+            setImagenVisor(imagenesParaSeleccionar[indiceIMG].Imagen)
+            setIndiceCertificado(indiceIMG)
+        }
     }
+        const siguienteImagen=()=>{
+            if(indiceCertificado >= imagenesParaSeleccionar.length-1){
+                setIndiceCertificado(indiceCertificado = 0)
+            }else{
+                setIndiceCertificado(indiceCertificado++)
+            }
+            // console.log(indiceCertificado)
+            modificarImg(indiceCertificado)
+        }
 
+    
 
-    const seleccionDeCertificado =(e)=>{
-        //bucle For que me devuelve todos los certificados
-        // for (let i = 0; i < imagenesSeleccionables.length; i++) {
-        //     const elements = imagenesSeleccionables[i];
-        //     // console.log(elements)
-        //     let arr = Array.from(elements.id)
-        //     console.log(arr.indexOf("Javascript desde Cero",[0]))
-        //     console.log(arr)
-        // }
-        // console.log(imagenesSeleccionables)
-        // console.log(imagenesSeleccionables.indexOf("Javascript desde Cero",[0]))
-        //  let arrayDeSelecionables= Array.from(e.target.closest("ul").children);
-        //  setImagenesSeleccionables(arrayDeSelecionables)
-
+const seleccionDeCertificado =(e)=>{
         //Certificado Seleccionado por click
          let cert = e.target.closest("li").id;
          setearCertificado(cert)
-         console.log(cert)
+         
     }
 
     const siguienteCertificado =()=>{
@@ -52,9 +61,9 @@ const PanelVistaPrevia =({ miSeleccion, Seccion,dataCertificados})=>{
             
             
             <div className="imagenContainer">
-            {/* -- Botones sin usar
+            {/* -- Botones sin usar */}
              <button className="CambiarImagen Left" >  </button>
-            <button className="CambiarImagen Right" onClick={siguienteCertificado}>  </button> */}
+            <button className="CambiarImagen Right" onClick={siguienteImagen}>  </button>
             { certificados ? (
                 <Image
                     className="elemento_imagen__IMAGEN"

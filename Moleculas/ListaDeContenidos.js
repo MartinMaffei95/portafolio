@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import useFetch from "../Hooks/UseFetch";
 
 const ListaDeContenidos = ({certificadosBuscados, objetoCertificados,funcionSeleccion})=>{
 
-    const certificados = useFetch('certificados');
     useEffect(() => {
         // if(certificados){certificados.forEach(c => console.log(c.Titulo))}
     },[certificadosBuscados])
@@ -14,12 +12,12 @@ const ListaDeContenidos = ({certificadosBuscados, objetoCertificados,funcionSele
         let prevSeleccionada= e.target.closest("li").id
         setCertificadoSeleccionado(prevSeleccionada)
     }
-        let array;
+    let array;
     if(objetoCertificados){
          array = objetoCertificados.filter(cer => cer.TAGS.includes(certificadosBuscados))
     }
    
-
+    
     
     let w=80;
     let h=60;

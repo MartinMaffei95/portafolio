@@ -6,7 +6,7 @@ import PanelVistaPrevia from "../Moleculas/PanelVistaPrevia"
 const Formacion =({data})=>{
 
 
-    const[seleccion, setSeleccion] = useState(null)
+    const[seleccion, setSeleccion] = useState("Javascript")
 
     const selectDisciplina =(e)=>{
         let disciplinaTarget = e.target.closest("div").id; // Id del DIV seleccionado. En base a este valor se setea la "seleccion"
