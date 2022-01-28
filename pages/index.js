@@ -16,12 +16,13 @@ const Home = ({certificados, proyectos}) => {
 }
 
 export default Home
-// export async function getServerSideProps(){
-  export async function getStaticProps(){
+export async function getServerSideProps(){
+  // export async function getStaticProps(){
   const resp = await fetch(`https://portafolio-mu-three.vercel.app/api/certificados`)
   const certificados = await resp.json()
-  const resp = await fetch(`https://portafolio-mu-three.vercel.app/api/proyectos`)
-  const proyectos = await resp.json()
+
+  const resp1 = await fetch(`https://portafolio-mu-three.vercel.app/api/proyectos`)
+  const proyectos = await resp1.json()
   return{
     props:{
       certificados,
