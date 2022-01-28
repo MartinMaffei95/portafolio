@@ -153,11 +153,12 @@ const PanelVistaPrevia =({ miSeleccion, Seccion, data,imagen,
                     </div>
 
                     <button className="ghost_button">
-                        <Link href="/Proyectos">
+                        {/* <Link href="/Proyectos"> */}
                             <a className="no-style">
                                 Ver más! {`>`}
                             </a>
-                        </Link> </button>
+                        {/* </Link>  */}
+                        </button>
                 </div>
             )
             : 
