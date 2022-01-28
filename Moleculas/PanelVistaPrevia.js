@@ -3,9 +3,10 @@ import ListaDeContenidos from "./ListaDeContenidos"
 import Icono from "./Icono"
 import { useEffect, useState } from "react"
 import FragmentoMuestra from "./FragmentoMuestra"
+import Link from "next/link"
 
 const PanelVistaPrevia =({ miSeleccion, Seccion, data,imagen,
-    proyectos
+    proyectos,categoriaProyecto
 })=>{
 
     const[imagenVisor, setImagenVisor] = useState(`/nada.jpg`)
@@ -40,14 +41,21 @@ const PanelVistaPrevia =({ miSeleccion, Seccion, data,imagen,
     }
 
 
-
+    const[proyecto,setProyecto] = useState(null)
     if(proyectos){
         const filtrarData= (filtro) =>{ //Funcion para filtrar data para obtener Array de obj filtrados
             let proyectoFiltrado = proyectos.filter(pro => pro.Categoria.includes(filtro)) // Filtrando data por categoria
             return proyectoFiltrado
+
+            
         }
 
-        console.log(filtrarData("Menúes"))
+        console.log(filtrarData("Menúes")[0].HTML)
+        console.log(filtrarData(categoriaProyecto))
+        const setearProyecto= (objProyecto)=>{
+
+        }
+
     }
 
 
@@ -95,7 +103,10 @@ const PanelVistaPrevia =({ miSeleccion, Seccion, data,imagen,
                 />
                 )
                 :
-                Seccion === "PROYECTOS" ? (<FragmentoMuestra/>)
+                Seccion === "PROYECTOS" ? (<FragmentoMuestra
+                    // URL={URL}
+                    // Titulo={Titulo}
+                    />)
                 :
                 (
                     <div className="elemento_imagen">
@@ -113,7 +124,7 @@ const PanelVistaPrevia =({ miSeleccion, Seccion, data,imagen,
 
 {/* SECCION DISEÑOS */}
 
-            {Seccion === "disenio" ? (
+            {Seccion === "PROYECTOS" ? (
                 <div className="diseniosInfo">
                     <div> {/* Lenguajes usados  - ICONOS+DESCRIPCION*/}
                         <h3>Lenguajes usados:</h3>
@@ -141,7 +152,12 @@ const PanelVistaPrevia =({ miSeleccion, Seccion, data,imagen,
                         </div>
                     </div>
 
-                    <button className="ghost_button"> Ver más! {`>`} </button>
+                    <button className="ghost_button">
+                        <Link href="/Proyectos">
+                            <a className="no-style">
+                                Ver más! {`>`}
+                            </a>
+                        </Link> </button>
                 </div>
             )
             : 

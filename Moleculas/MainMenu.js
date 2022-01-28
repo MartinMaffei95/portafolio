@@ -15,21 +15,21 @@ const MainMenu =({ desplegable,funcionContraer })=>{
             {/* menu navegador */}
             <ul className="menuHeader">
                 <li className="MenuHeader_element">
-                <Link  href="#">
+                <Link  href="/#">
                     <a onClick={funcionContraer}>
                         Quien Soy?
                     </a>
                 </Link>
                 </li>
                 <li className="MenuHeader_element">
-                <Link  href="#FORMACION_ID">
+                <Link  href="/#FORMACION_ID">
                     <a onClick={funcionContraer}>
                         Formacion
                     </a>
                 </Link>
                 </li>
                 <li className="MenuHeader_element">
-                <Link  href="#DISENIOS_ID">
+                <Link  href="/#DISENIOS_ID">
                     <a onClick={funcionContraer}>
                         Diseños
                     </a>
@@ -37,7 +37,7 @@ const MainMenu =({ desplegable,funcionContraer })=>{
                 </li>
                 <li className="MenuHeader_element contact_element">
                     <div className="ContactoHeader"> 
-                        <Link href="#">
+                        <Link href="/">
                             <a>
                                 Descarga mi Cv!
                             </a>

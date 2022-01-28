@@ -29,7 +29,7 @@ const Formacion =({data})=>{
 
     return(
         <div className="SectionLO Formacion" id="FORMACION_ID">
-            <h2 className="titulo"  > Mis Certificados</h2 >
+            <h2 className="titulo"  > Cursos </h2 >
             <div className="disciplinas" onClick={selectDisciplina}>
                     {/* <Disciplina
                     titulo="HTML"

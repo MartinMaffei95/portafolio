@@ -1,8 +1,13 @@
+const FragmentoMuestra = ({URL,Titulo})=>{
 
-const FragmentoMuestra = ({nombre})=>{
     return(
         <div className="contenedorProyecto">
-            <button>Hola soy el boton de muestra</button>
+            <iframe className="contenedorProyecto_iframe" id="inlineFrameExample"
+                title="Inline Frame Example"
+                width="100%"
+                height="100%"
+                src="https://portafolio-mu-three.vercel.app/">
+            </iframe>
         </div>
     )
 }

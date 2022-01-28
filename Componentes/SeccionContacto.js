@@ -15,13 +15,13 @@ const SeccionContacto = ()=>{
                 <div className="iconos_container">
                     <Icono
                         nombre="Git"
-                        imagenSRC="../Iconos/008-github.png"
+                        imagenSRC="../iconos/008-github.png"
                         esLink={true}
                         Url={"https://github.com/"}
                     />
                     <Icono
                         nombre="LindIn"
-                        imagenSRC="../Iconos/006-sass.png"
+                        imagenSRC="../iconos/linkedin.png"
                         esLink={true}
                         Url={"https://www.linkedin.com/feed/"}
                     />
