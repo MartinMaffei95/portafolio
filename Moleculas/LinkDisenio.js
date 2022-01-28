@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const LinkDisenio = ({nombre,funcionRetornar})=>{
     return(
@@ -6,11 +7,16 @@ const LinkDisenio = ({nombre,funcionRetornar})=>{
                 <Image
                 src="/mcmini.jpg"
                 alt="i"
-                height={360}
-                width={480}
+                height={259}
+                width={461}
                 />
                 <div className="wallText">
-                    <p >{nombre}</p>
+                    <Link href="https://mac-mini-landing-edteam.vercel.app/">
+                    <a target="blank" className="no-style link">
+                        {nombre}
+                    </a>
+                    </Link>
+                    
                 </div>
                 
     </li>

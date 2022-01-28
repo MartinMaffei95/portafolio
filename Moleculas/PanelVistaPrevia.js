@@ -98,8 +98,8 @@ const PanelVistaPrevia =({ miSeleccion, Seccion, data,imagen,
                     className="elemento_imagen__IMAGEN"
                     src={imagenVisor}
                     alt="i"
-                    height={360}
-                    width={480}
+                    height={432}
+                    width={768}
                 />
                 )
                 :
