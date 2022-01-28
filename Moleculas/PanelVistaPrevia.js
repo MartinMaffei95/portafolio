@@ -2,24 +2,18 @@ import Image from "next/image"
 import ListaDeContenidos from "./ListaDeContenidos"
 import Icono from "./Icono"
 import { useEffect, useState } from "react"
+import FragmentoMuestra from "./FragmentoMuestra"
 
-
-const PanelVistaPrevia =({ 
-    miSeleccion, Seccion,dataCertificados,imagen //Props para seccion de FORMACION
+const PanelVistaPrevia =({ miSeleccion, Seccion, data,imagen,
+    proyectos
 })=>{
-
-    const certificados = dataCertificados;
 
     const[imagenVisor, setImagenVisor] = useState(`/nada.jpg`)
     const [indiceCertificado , setIndiceCertificado] =useState(0)
     let indiceIMG;
-    console.log(imagen)
-    
-        
-        
 
-    if(certificados){
-        let imagenesParaSeleccionar = certificados.filter(cer => cer.TAGS.includes(miSeleccion));
+    if(data){
+        let imagenesParaSeleccionar = data.filter(cer => cer.TAGS.includes(miSeleccion));
 
         const modificarImg =(IndiceImagen)=>{
             // console.log(imagenesParaSeleccionar[IndiceImagen].Imagen)
@@ -32,7 +26,7 @@ const PanelVistaPrevia =({
         
 
         const setearCertificado =(curso)=>{
-            let cert = certificados.filter(cer => cer.Titulo == curso);
+            let cert = data.filter(cer => cer.Titulo == curso);
             indiceIMG = imagenesParaSeleccionar.indexOf(cert[0]) //Obteniendo el indice seleccionado de la imagen
             modificarImg(indiceIMG)
             
@@ -45,6 +39,16 @@ const PanelVistaPrevia =({
         },[miSeleccion])
     }
 
+
+
+    if(proyectos){
+        const filtrarData= (filtro) =>{ //Funcion para filtrar data para obtener Array de obj filtrados
+            let proyectoFiltrado = proyectos.filter(pro => pro.Categoria.includes(filtro)) // Filtrando data por categoria
+            return proyectoFiltrado
+        }
+
+        console.log(filtrarData("Menúes"))
+    }
 
 
         const siguienteImagen=()=>{
@@ -81,7 +85,7 @@ const PanelVistaPrevia =({
             {/* -- Botones sin usar */}
             <button className="CambiarImagen Left" onClick={anteriorImagen}>  </button>
             <button className="CambiarImagen Right" onClick={siguienteImagen}>  </button>
-            { certificados ? (
+            { data ? (
                 <Image
                     className="elemento_imagen__IMAGEN"
                     src={imagenVisor}
@@ -90,6 +94,8 @@ const PanelVistaPrevia =({
                     width={480}
                 />
                 )
+                :
+                Seccion === "PROYECTOS" ? (<FragmentoMuestra/>)
                 :
                 (
                     <div className="elemento_imagen">
@@ -100,7 +106,7 @@ const PanelVistaPrevia =({
             <div className="selectorContenido" >
                 <ListaDeContenidos
                     certificadosBuscados={miSeleccion}
-                    objetoCertificados = {certificados}
+                    objetoCertificados = {data}
                     funcionSeleccion ={seleccionDeCertificado}
                 />
             </div>
@@ -130,7 +136,7 @@ const PanelVistaPrevia =({
 
                         <div className="descripcionDisenio">{/* Lenguajes usados  - DESCRIPCION*/}
                             <p>
-                                Esta herramienta permite experimentar con el efcto "xxxx" de CSS
+                                {proyectos && proyectos[0].Descripcion}
                             </p>
                         </div>
                     </div>

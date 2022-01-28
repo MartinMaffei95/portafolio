@@ -9,7 +9,7 @@ const Home = ({certificados, proyectos}) => {
     <Header/>
     <QuienSoy/>
     <Formacion data={certificados}/>
-    <MisDisenios data={proyectos}/>
+    <MisDisenios proyectos={proyectos}/>
     <SeccionContacto/>
     </>
   )

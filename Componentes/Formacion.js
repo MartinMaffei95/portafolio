@@ -79,8 +79,8 @@ const Formacion =({data})=>{
             <div className="vistaPrevio">
                     <PanelVistaPrevia 
                         miSeleccion={seleccion}
-                        Seccion = ""
-                        dataCertificados={data}
+                        Seccion = "FORMACION"
+                        data={data}
                         imagen={imagen}
                     />
             </div>

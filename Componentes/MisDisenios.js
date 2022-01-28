@@ -1,7 +1,7 @@
 import PanelVistaPrevia from "../Moleculas/PanelVistaPrevia"
 import LinkDisenio from "../Moleculas/LinkDisenio"
 
-const MisDisenios =()=>{
+const MisDisenios =({proyectos})=>{
     
     let miSeleccion
     
@@ -29,7 +29,8 @@ const MisDisenios =()=>{
         <div className="VisorDeDisenios">
             <PanelVistaPrevia 
                 miSeleccion={miSeleccion}
-                Seccion = "disenio"
+                proyectos={proyectos}
+                Seccion = "PROYECTOS"
             />
             {/* INFO DE EL DISEÑO + BOTON "vermas" */}
         </div>

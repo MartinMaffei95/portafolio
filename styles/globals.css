@@ -900,6 +900,9 @@ body{
 
 .Disenios .imagenContainer{
     position: relative;
+    background-color: #FFF;
+    height: 360px;
+    width: 480px;
 }
 
 .Disenios .VisorContenedor .CambiarImagen{
@@ -915,6 +918,7 @@ body{
     height: var(--tamaño-CambiarImagen);
 }
 
+/* .Disenios */
 
 
 
