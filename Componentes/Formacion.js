@@ -28,10 +28,10 @@ const Formacion =({data})=>{
     
 
     return(
-        <div className="SectionLO Formacion">
-            <h2 className="titulo" id="FORMACION_ID" > Mis Certificados</h2 >
+        <div className="SectionLO Formacion" id="FORMACION_ID">
+            <h2 className="titulo"  > Mis Certificados</h2 >
             <div className="disciplinas" onClick={selectDisciplina}>
-                <Disciplina
+                    {/* <Disciplina
                     titulo="HTML"
                     imagen="/iconos/001-html-5.png"
                     
@@ -40,7 +40,7 @@ const Formacion =({data})=>{
                     titulo="CSS"
                     imagen="/iconos/003-css-3.png"
                     // onClick={selectDisciplina}
-                    />
+                    /> */}
                     <Disciplina
                     titulo="Javascript"
                     imagen="/iconos/004-js.png"
@@ -51,16 +51,16 @@ const Formacion =({data})=>{
                     imagen="/iconos/005-react.png"
                     // onClick={selectDisciplina}
                     />
-                    <Disciplina
+                    {/* <Disciplina
                     titulo="Sass"
                     imagen="/iconos/006-sass.png"
                     // onClick={selectDisciplina}
-                    />
-                    <Disciplina
+                    /> */}
+                    {/* <Disciplina
                     titulo="NodeJs"
                     imagen="/iconos/007-nodejs.png"
                     // onClick={selectDisciplina}
-                    />
+                    /> */}
                     <Disciplina
                     titulo="Testing"
                     imagen="/iconos/009-antivirus.png"

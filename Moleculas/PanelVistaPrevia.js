@@ -4,7 +4,9 @@ import Icono from "./Icono"
 import { useEffect, useState } from "react"
 
 
-const PanelVistaPrevia =({ miSeleccion, Seccion,dataCertificados,imagen})=>{
+const PanelVistaPrevia =({ 
+    miSeleccion, Seccion,dataCertificados,imagen //Props para seccion de FORMACION
+})=>{
 
     const certificados = dataCertificados;
 
@@ -65,17 +67,11 @@ const PanelVistaPrevia =({ miSeleccion, Seccion,dataCertificados,imagen})=>{
 
         
 
-const seleccionDeCertificado =(e)=>{
+    const seleccionDeCertificado =(e)=>{
         //Certificado Seleccionado por click
          let cert = e.target.closest("li").id;
          setearCertificado(cert)
     }
-
-    // useEffect(()=>{
-    //     if(certificados){
-    //         setImagenVisor(modificarImg(0))
-    //     }
-    // },)
 
     return(
         <div className="VisorContenedor">
@@ -83,7 +79,7 @@ const seleccionDeCertificado =(e)=>{
             
             <div className="imagenContainer">
             {/* -- Botones sin usar */}
-             <button className="CambiarImagen Left" onClick={anteriorImagen}>  </button>
+            <button className="CambiarImagen Left" onClick={anteriorImagen}>  </button>
             <button className="CambiarImagen Right" onClick={siguienteImagen}>  </button>
             { certificados ? (
                 <Image

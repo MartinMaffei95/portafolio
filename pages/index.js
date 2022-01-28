@@ -4,12 +4,12 @@ import MisDisenios from "../Componentes/MisDisenios"
 import QuienSoy from "../Componentes/QuienSoy"
 import SeccionContacto from "../Componentes/SeccionContacto"
 
-const Home = ({certificados}) => {
+const Home = ({certificados, proyectos}) => {
   return ( <>
     <Header/>
     <QuienSoy/>
     <Formacion data={certificados}/>
-    <MisDisenios/>
+    <MisDisenios data={proyectos}/>
     <SeccionContacto/>
     </>
   )
@@ -20,9 +20,12 @@ export async function getServerSideProps(){
   // export async function getStaticProps(){
   const resp = await fetch(`https://portafolio-mu-three.vercel.app/api/certificados`)
   const certificados = await resp.json()
+  const resp = await fetch(`https://portafolio-mu-three.vercel.app/api/proyectos`)
+  const proyectos = await resp.json()
   return{
     props:{
-      certificados
+      certificados,
+      proyectos
     }
   }
 }
