@@ -1187,7 +1187,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position:relative;
+    /* position:relative; */
 }
 
 .formContacto{
@@ -1253,3 +1253,58 @@ body{
     font-size: var(--f-size-bigger);
 }
 
+.modal{
+    background-color: var(--header-menu-color);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.modal.inactivo{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal.activo{
+    opacity: .75;
+    pointer-events: all;
+}
+
+.datazo{
+    background-color: var(--border-color);
+    z-index: 51;
+    position: fixed;
+    height: 50%;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+    text-align: center;
+    padding: 10%;
+    border-radius: 25px;
+}
+
+.datazo button{
+    color: black;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--smooth-font-color);
+    cursor: pointer;
+}
+
+.datazo.inactivo{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.datazo.activo{
+    opacity: 1;
+    pointer-events: all;
+}

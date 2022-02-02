@@ -1,44 +1,72 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import { useState } from 'react/cjs/react.development';
 
 const FormularioContacto = ()=>{
 
+        const[activo,setActivo] = useState(false)
         const form = useRef();
-      
+        const modal = useRef();
+
+        const toggleModal= ()=>{
+            if(!activo){
+                setActivo(true)
+            }else{
+                setActivo(false)
+            }
+        }
+
         const sendEmail = (e) => {
           e.preventDefault();
             // console.log(form.current)
         
-        emailjs.sendForm('service_0oe7msl', 'template_kemb6qk', form.current,'user_94OEa5I6liQW8zLBMtZDj')
-            .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-                console.log('FAILED...', error);
-            })
+        // emailjs.sendForm('service_0oe7msl', 'template_kemb6qk', form.current,'user_94OEa5I6liQW8zLBMtZDj')
+        //     .then(function(response) {
+        //         console.log('SUCCESS!', response.status, response.text);
+        //     }, function(error) {
+        //         console.log('FAILED...', error);
+        //     })
+
+        console.log("Se eviaron ok")
+        form.current.reset()
+        toggleModal()
         }
 
-    return(
+    return(<>
+        
     <div className="SectionLO FormularioContacto">
+
+<button onClick={toggleModal}> CERRAR MODAL </button>
 
         <form className="formContacto" ref={form} onSubmit={sendEmail}>
             <label className="grid_element Nombre"> Nombre:
-                <input placeholder='Pedro' autofocus="autofocus" required type="text" name="user_name"/>
+                <input id='nombre' placeholder='Pedro' autofocus="autofocus" required type="text" name="user_name"/>
             </label>
             <label className="grid_element Apellido"> Apellido:
-                <input placeholder='Rodriguez' required type="text" name="user_posname"/>
+                <input id='apellido' placeholder='Rodriguez' required type="text" name="user_posname"/>
             </label>
             <label className="grid_element Mail"> Correo electronico:
-                <input placeholder='asd123@correo.com' required type="email" name="user_email"/>
+                <input id='email' placeholder='asd123@correo.com' required type="email" name="user_email"/>
             </label>
             <label className="grid_element Asunto"> Asunto:
-                <input placeholder='Crear mi Sitio WEB' required type="text" name="user_matter" />
+                <input id='asunto' placeholder='Crear mi Sitio WEB' required type="text" name="user_matter" />
             </label>
             <label className="grid_element Mensaje"> Mensaje:
-                <textarea placeholder='Hola. Buscamos crear el sitio WEB de nuestro emprendimiento.' required name="message"/>
+                <textarea id='msj' placeholder='Hola. Buscamos crear el sitio WEB de nuestro emprendimiento.' required name="message"/>
             </label>
                 <input  className="grid_element Enviar"  type="submit" value="Enviar"/>
         </form>
+        
     </div>
+    <div ref={modal} className={activo ? `modal activo` : `modal inactivo`}>
+        
+    </div>
+    <div className={activo ? `datazo activo` : `datazo inactivo`}>
+           <h2>¡E-mail enviado con exito!</h2>
+           <h3>En breve estaremos en contacto</h3>
+           <button onClick={toggleModal}> X </button>
+    </div>
+    </>
     )
 }
 
