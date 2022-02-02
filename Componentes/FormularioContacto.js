@@ -20,12 +20,12 @@ const FormularioContacto = ()=>{
           e.preventDefault();
             // console.log(form.current)
         
-        // emailjs.sendForm('service_0oe7msl', 'template_kemb6qk', form.current,'user_94OEa5I6liQW8zLBMtZDj')
-        //     .then(function(response) {
-        //         console.log('SUCCESS!', response.status, response.text);
-        //     }, function(error) {
-        //         console.log('FAILED...', error);
-        //     })
+        emailjs.sendForm('service_0oe7msl', 'template_kemb6qk', form.current,'user_94OEa5I6liQW8zLBMtZDj')
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                console.log('FAILED...', error);
+            })
 
         console.log("Se eviaron ok")
         form.current.reset()
@@ -36,7 +36,7 @@ const FormularioContacto = ()=>{
         
     <div className="SectionLO FormularioContacto">
 
-<button onClick={toggleModal}> CERRAR MODAL </button>
+{/* <button onClick={toggleModal}> CERRAR MODAL </button> */}
 
         <form className="formContacto" ref={form} onSubmit={sendEmail}>
             <label className="grid_element Nombre"> Nombre:
