@@ -4,15 +4,15 @@ import { useState } from 'react/cjs/react.development';
 
 const FormularioContacto = ()=>{
 
-        const[activo,setActivo] = useState(false)
+        const[activo,setActivo] = useState('inactivo')
         const form = useRef();
         const modal = useRef();
 
         const toggleModal= ()=>{
-            if(!activo){
-                setActivo(true)
+            if(activo === 'inactivo'){
+                setActivo('activo')
             }else{
-                setActivo(false)
+                setActivo('inactivo')
             }
         }
 
@@ -32,40 +32,34 @@ const FormularioContacto = ()=>{
         toggleModal()
         }
 
-    return(<>
-        
-    <div className="SectionLO FormularioContacto">
-
-{/* <button onClick={toggleModal}> CERRAR MODAL </button> */}
-
-        <form className="formContacto" ref={form} onSubmit={sendEmail}>
-            <label className="grid_element Nombre"> Nombre:
-                <input id='nombre' placeholder='Pedro' autofocus="autofocus" required type="text" name="user_name"/>
-            </label>
-            <label className="grid_element Apellido"> Apellido:
-                <input id='apellido' placeholder='Rodriguez' required type="text" name="user_posname"/>
-            </label>
-            <label className="grid_element Mail"> Correo electronico:
-                <input id='email' placeholder='asd123@correo.com' required type="email" name="user_email"/>
-            </label>
-            <label className="grid_element Asunto"> Asunto:
-                <input id='asunto' placeholder='Crear mi Sitio WEB' required type="text" name="user_matter" />
-            </label>
-            <label className="grid_element Mensaje"> Mensaje:
-                <textarea id='msj' placeholder='Hola. Buscamos crear el sitio WEB de nuestro emprendimiento.' required name="message"/>
-            </label>
-                <input  className="grid_element Enviar"  type="submit" value="Enviar"/>
-        </form>
-        
-    </div>
-    <div ref={modal} className={activo ? `modal activo` : `modal inactivo`}>
-        
-    </div>
-    <div className={activo ? `datazo activo` : `datazo inactivo`}>
+    return(
+    <>
+        <div className="SectionLO FormularioContacto">
+            <form className="formContacto" ref={form} onSubmit={sendEmail}>
+                <label className="grid_element Nombre"> Nombre:
+                    <input id='nombre' placeholder='Pedro' autofocus="autofocus" required type="text" name="user_name"/>
+                </label>
+                <label className="grid_element Apellido"> Apellido:
+                    <input id='apellido' placeholder='Rodriguez' required type="text" name="user_posname"/>
+                </label>
+                <label className="grid_element Mail"> Correo electronico:
+                    <input id='email' placeholder='asd123@correo.com' required type="email" name="user_email"/>
+                </label>
+                <label className="grid_element Asunto"> Asunto:
+                    <input id='asunto' placeholder='Crear mi Sitio WEB' required type="text" name="user_matter" />
+                </label>
+                <label className="grid_element Mensaje"> Mensaje:
+                    <textarea id='msj' placeholder='Hola. Buscamos crear el sitio WEB de nuestro emprendimiento.' required name="message"/>
+                </label>
+                    <input  className="grid_element Enviar"  type="submit" value="Enviar"/>
+            </form>
+        </div>
+        <div ref={modal} className={`modal ${activo}` }></div>
+        <div className={`datazo ${activo}` }>
            <h2>¡E-mail enviado con exito!</h2>
            <h3>En breve estaremos en contacto</h3>
            <button onClick={toggleModal}> X </button>
-    </div>
+        </div>
     </>
     )
 }
