@@ -3,7 +3,6 @@ import ListaDeContenidos from "./ListaDeContenidos"
 import Icono from "./Icono"
 import { useEffect, useState } from "react"
 import FragmentoMuestra from "./FragmentoMuestra"
-import Link from "next/link"
 
 const PanelVistaPrevia =({ miSeleccion, Seccion, data,imagen,
     proyectos,categoriaProyecto

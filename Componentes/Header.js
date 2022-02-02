@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Logo from "../Moleculas/Logo"
 import MainMenu from "../Moleculas/MainMenu"
+import Link from "next/link"
 
 const Header = ()=>{
 
@@ -42,7 +43,15 @@ const Header = ()=>{
             />
              <div className="botonesMovil">
                 <button onClick={menuToggle} className="desplegableButton"></button>
-                <button className="fill_button contactoButton">Contacto</button>
+                <Link href="./Contacto">
+                
+                <button className="fill_button contactoButton">
+                        {/* <a className="no-style"> */}
+                            Contacto
+                        {/* </a> */}
+                    
+                    </button>
+                    </Link>
             </div>
 
         </main>
