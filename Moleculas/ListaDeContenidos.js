@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+//comentario de prueba
 
 const ListaDeContenidos = ({certificadosBuscados, objetoCertificados,funcionSeleccion})=>{
 
