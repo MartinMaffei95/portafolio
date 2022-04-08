@@ -8,20 +8,14 @@ const MisDisenios =({proyectos})=>{
         <ul className="diseniosNav">
             <LinkDisenio
                 nombre="Copia Mac Mini | LandingPage"
-                // funcionRetornar={proyectoSeleccionado}
+                url="https://mac-mini-landing-edteam.vercel.app/"
+                img="/designImages/mcmini.jpg"
             />
             <LinkDisenio
-                nombre="Copia Mac Mini | LandingPage"
-                // funcionRetornar={proyectoSeleccionado}
-            />
-            <LinkDisenio
-                nombre="Copia Mac Mini | LandingPage"
-                // funcionRetornar={proyectoSeleccionado}
-            />
-            <LinkDisenio
-                nombre="Copia Mac Mini | LandingPage"
-                // funcionRetornar={proyectoSeleccionado}
-            />
+                nombre="Password Creator | App para generar passwords"
+                url="https://password-creator-silk.vercel.app/"
+                img="/designImages/PasswordGenerator.png"
+            />            
         </ul>
     </div>
     )

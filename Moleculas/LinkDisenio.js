@@ -1,24 +1,21 @@
 import Image from "next/image"
-import Link from "next/link"
 
-const LinkDisenio = ({nombre,funcionRetornar})=>{
+const LinkDisenio = ({nombre,url,img})=>{
     return(
     <li className="diseniosNav_elemento" >
                 <Image
-                src="/mcmini.jpg"
-                alt="i"
+                src={img}
+                alt={nombre}
                 height={259}
                 width={461}
                 />
-                <div className="wallText">
-                    <Link href="https://mac-mini-landing-edteam.vercel.app/">
-                    <a target="blank" className="no-style link">
-                        {nombre}
-                    </a>
-                    </Link>
-                    
-                </div>
-                
+                <a  target="_blank" href={url}>
+                    <div className="wallText">
+                        <span className="link disenioInfo">
+                            {nombre}
+                        </span>
+                    </div>
+                </a>
     </li>
     )
 }

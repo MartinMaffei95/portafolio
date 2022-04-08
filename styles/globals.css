@@ -903,12 +903,11 @@ body{
 
 .Disenios a{
     text-decoration: none;
-    position: relative;
-    border-left: var(--font-color) 2px solid;
-    border-right: var(--font-color) 2px solid;
-    padding: 0 .5rem;
+    /* position: relative; */
+    /* border-left: var(--font-color) 2px solid;
+        border-right: var(--font-color) 2px solid; */
+    /* padding: 0 .5rem; */
     white-space: nowrap;
-
     cursor: pointer;
 }
 
@@ -928,12 +927,9 @@ body{
     margin-bottom: 2rem;
     list-style: none;
     min-width: 20rem;
-    min-height: 10rem;
     border: var(--border-separador);
     position: relative;
-
     transition: transform .3s, box-shadow .3s ease-out;
-
     cursor: pointer;
 
 }
@@ -981,7 +977,7 @@ body{
     height: 100%;
     width: 100%;
     /* margin: 0; */
-    padding: 0;
+    padding: 10;
 }
 
 .Disenios .VisorContenedor .CambiarImagen{
