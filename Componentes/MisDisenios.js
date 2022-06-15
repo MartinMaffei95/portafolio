@@ -15,7 +15,12 @@ const MisDisenios =({proyectos})=>{
                 nombre="Password Creator | App para generar passwords"
                 url="https://password-creator-silk.vercel.app/"
                 img="/designImages/PasswordGenerator.png"
-            />            
+            />   
+            <LinkDisenio
+                nombre="Password Creator | App para generar passwords"
+                url="https://movie-app-gamma-seven.vercel.app/"
+                img="/designImages/MovieSite.png"
+            />           
         </ul>
     </div>
     )

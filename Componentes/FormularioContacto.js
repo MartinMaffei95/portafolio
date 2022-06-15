@@ -51,7 +51,7 @@ const FormularioContacto = ()=>{
                 <label className="grid_element Mensaje"> Mensaje:
                     <textarea id='msj' placeholder='Hola. Buscamos crear el sitio WEB de nuestro emprendimiento.' required name="message"/>
                 </label>
-                    <input  className="grid_element Enviar"  type="submit" value="Enviar"/>
+                    <input  className="grid_element fill_button contactoButton Enviar"  type="submit" value="Enviar"/>
             </form>
         </div>
         <div ref={modal} className={`modal ${activo}` }></div>
