@@ -17,7 +17,7 @@ const MisDisenios =({proyectos})=>{
                 img="/designImages/PasswordGenerator.png"
             />   
             <LinkDisenio
-                nombre="Password Creator | App para generar passwords"
+                nombre="MovieSite | Sitio con informacion de peliculas usando MovieDB"
                 url="https://movie-app-gamma-seven.vercel.app/"
                 img="/designImages/MovieSite.png"
             />           
