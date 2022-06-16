@@ -37,11 +37,11 @@ const MainMenu =({ desplegable,funcionContraer })=>{
                 </li>
                 <li className="MenuHeader_element contact_element">
                     <div className="ContactoHeader"> 
-                        <Link href="/">
-                            <a>
+                        {/* <Link > */}
+                            <a target="_blank" href="../public/descargable/CvMartinMaffei_16_06_22.pdf">
                                 Descarga mi Cv!
                             </a>
-                        </Link>
+                        {/* </Link> */}
                     </div>
                 </li>
             </ul>

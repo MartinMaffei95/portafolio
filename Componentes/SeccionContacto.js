@@ -5,7 +5,7 @@ const SeccionContacto = ()=>{
 
     return(
     <div className="SectionLO Contacto">
-        <h2 className="titulo"> Contacto </h2>
+        <h2 id="CONTACTO_ID" className="titulo"> Contacto </h2>
 
         <div className="sub_flex first">
         <div className="Redes_sociales">
