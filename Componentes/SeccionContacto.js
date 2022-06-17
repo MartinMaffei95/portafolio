@@ -5,7 +5,7 @@ const SeccionContacto = ()=>{
 
     return(
     <div className="SectionLO Contacto">
-        <h2 id="CONTACTO_ID" className="titulo"> Contacto </h2>
+        <h2 id="DISENIOS_ID" className="titulo"> Contacto </h2>
 
         <div className="sub_flex first">
         <div className="Redes_sociales">
@@ -26,7 +26,7 @@ const SeccionContacto = ()=>{
                     />
                 </div>
             </div>
-            <button className="ghost_button"> Descarga mi Cv</button>
+            <a className="ghost_button" href='../pdf/CvMartinMaffei160622.pdf' target="_blank" rel="noopener noreferrer"> Descarga mi Cv</a>
 
             <button className="fill_button TabletYPC"> Contacto</button>
             <span className="masInfo">

@@ -83,7 +83,8 @@ body{
     padding: .5rem 1rem;
     font-weight: var(--f-wight-bold);
     font-size: var(--f-size-normal);
-    
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
     transition: transform .3s ease-in;
 }

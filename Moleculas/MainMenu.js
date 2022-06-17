@@ -1,5 +1,5 @@
 import Link from "next/link"
-
+// import pdf from '../public/pdf/CvMartinMaffei160622.pdf'
 
 const MainMenu =({ desplegable,funcionContraer })=>{
     let estado
@@ -38,7 +38,7 @@ const MainMenu =({ desplegable,funcionContraer })=>{
                 <li className="MenuHeader_element contact_element">
                     <div className="ContactoHeader"> 
                         {/* <Link > */}
-                            <a target="_blank" href="../public/descargable/CvMartinMaffei_16_06_22.pdf">
+                            <a  href='../pdf/CvMartinMaffei160622.pdf' target="_blank" rel="noopener noreferrer" >
                                 Descarga mi Cv!
                             </a>
                         {/* </Link> */}
