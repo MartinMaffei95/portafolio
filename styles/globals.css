@@ -33,6 +33,7 @@
     --header-menu-color:#0a131b;
 
     --background-color:#01080f;
+    --background-color-Opacity50:#01080f87;
     --background-colorSec:#041c35;
 
     --border-color:#333d46;
@@ -944,15 +945,62 @@ body{
     top: 0;
     left: 0;
     background-color: rgba(1, 8, 15, .5);
+    overflow: hidden;
 }
 
 .wallText .link{
     margin: auto;
-    padding: 5%;
-    text-align: center;
-    background-color: var(--background-color);
-    border: var(--border-separador);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 15%;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: rotate(-45deg) skew(90deg) ;
+    transition: transform .3s ease-in-out, background 0s;
+    /* pointer-events: none; */
 }
+
+.wallText:hover .link{
+    pointer-events: all;
+    opacity: 1;
+    transform: rotateX(0deg) skew(0);
+    background-color: var(--background-color-Opacity50);
+}   
+
+
+
+.link .title{
+    font-weight: bold;
+    font-size: var(--f-size-normal);
+}
+
+.link .description{
+    font-weight: lighter;
+    font-size: var(--f-size-small);
+}
+
+.link .tec{
+    font-weight: lighter;
+    font-size: 1rem;
+}
+@media screen and (max-width : 978px){
+    .link.onScreen{
+        pointer-events: all;
+        opacity: 1;
+        transform: rotateX(0deg) skew(0);
+        background-color: var(--background-color-Opacity50);
+    }
+    
+}
+
+
 
 .Disenios .diseniosNav_elemento:hover .wallText{
     background-color: rgba(1, 8, 15, .2);
@@ -1067,6 +1115,8 @@ body{
     padding: 0; 
     overflow: hidden;
 } */
+
+
 
 /*SECCION DE CONTACTO*/
 
