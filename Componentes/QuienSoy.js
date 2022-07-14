@@ -10,7 +10,7 @@ const QuienSoy = ()=>{
         <div className="imagen">
             <Image 
             className="imagen_perfil"
-            src="/perfil.png"
+            src="/portafolioIMG.png"
             alt="Foto de Perfil"
             height={200}
             width={200}

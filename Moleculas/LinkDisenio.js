@@ -1,6 +1,6 @@
 import Image from "next/image"
 import{ useRef} from "react"
-import useObserver from "../Hooks/useObserver"
+import {useObserver} from "../Hooks/useObserver"
 
 
 const LinkDisenio = ({nombre,descr,tecUtil,url,img})=>{

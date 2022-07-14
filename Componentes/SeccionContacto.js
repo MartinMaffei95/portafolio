@@ -26,7 +26,7 @@ const SeccionContacto = ()=>{
                     />
                 </div>
             </div>
-            <a className="ghost_button" href='../pdf/CvMartinMaffei160622.pdf' target="_blank" rel="noopener noreferrer"> Descarga mi Cv</a>
+            <a className="ghost_button" href={process.env.NEXT_PUBLIC_PDF_UBI} target="_blank" rel="noopener noreferrer"> Descarga mi Cv</a>
 
             <button className="fill_button TabletYPC"> Contacto</button>
             <span className="masInfo">

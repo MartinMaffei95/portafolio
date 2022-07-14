@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
-const useObserver =(ref, rootMargin)=>{
+export const useObserver =(ref, rootMargin=0)=>{
         // State and setter for storing whether element is visible
         const [isIntersecting, setIntersecting] = useState(false);
-      
+
         useEffect(() => {
           const observer = new IntersectionObserver(
             ([entry]) => {
@@ -24,4 +24,3 @@ const useObserver =(ref, rootMargin)=>{
       
         return isIntersecting;
       }
-export default useObserver

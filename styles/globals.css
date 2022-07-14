@@ -540,6 +540,9 @@ body{
 
 .SectionLO.QuienSoy .imagen_perfil{
     border-radius: 50%;
+    background-color: #d6e0dc;
+    object-fit: cover;
+    filter: contrast(1.5) grayscale(.2);
 }
 
 
@@ -963,8 +966,8 @@ body{
 
     opacity: 0;
     transform: rotate(-45deg) skew(90deg) ;
-    transition: transform .3s ease-in-out, background 0s;
-    /* pointer-events: none; */
+    transition: transform .3s ease-in-out, background 2s;
+    pointer-events: none;
 }
 
 .wallText:hover .link{
@@ -972,6 +975,7 @@ body{
     opacity: 1;
     transform: rotateX(0deg) skew(0);
     background-color: var(--background-color-Opacity50);
+    transition: transform .3s ease-in-out, background 1s;
 }   
 
 
@@ -996,6 +1000,7 @@ body{
         opacity: 1;
         transform: rotateX(0deg) skew(0);
         background-color: var(--background-color-Opacity50);
+        transition: transform .3s ease-in-out, background 1s;
     }
     
 }
