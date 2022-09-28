@@ -4,10 +4,16 @@ const MisDisenios = ({ proyectos }) => {
   return (
     <div className="SectionLO Disenios">
       <h2 className="titulo" id="DISENIOS_ID">
-        {' '}
-        Diseños destacados
+        Mis proyectos creados
       </h2>
       <ul className="diseniosNav">
+        <LinkDisenio
+          nombre="PostWeb"
+          descr="Permite crear posts y compartirlos"
+          tecUtil="NodeJs,Express,JWT,MongoDB,React,Redux,ReactRouterDOM"
+          url="https://post-web-fe.vercel.app/"
+          img="/designImages/postWeb.jpg"
+        />
         <LinkDisenio
           nombre="Landing page Mac Mini"
           descr="Copia de landing page de MacMini"
