@@ -58,6 +58,11 @@ const Formacion = ({ data }) => {
           imagen="/iconos/009-antivirus.png"
           // onClick={selectDisciplina}
         />
+        <Disciplina
+          titulo="UX/UI"
+          imagen="/iconos/011-uxui.png"
+          // onClick={selectDisciplina}
+        />
 
         {/* <Disciplina
                     titulo=""

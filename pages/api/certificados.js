@@ -28,7 +28,7 @@ export default function handler(req, res) {
     {
       Titulo: 'Flexbox Y Grid',
       Imagen: '/ImagenesCursos/Flexboxgrid.ong',
-      TAGS: ['Css', 'Diseño', 'FrontEnd'],
+      TAGS: ['Css', 'Diseño', 'FrontEnd', 'UX/UI'],
       ID: 4,
     },
     {
@@ -70,7 +70,7 @@ export default function handler(req, res) {
     {
       Titulo: 'UI Desing | Diseño de interfaces',
       Imagen: '/ImagenesCursos/UiDesing.png',
-      TAGS: ['Diseño', 'UI Desing', 'Herramientas de trabajo'],
+      TAGS: ['Diseño', 'UX', 'UI', 'UX/UI', 'Herramientas de trabajo'],
       ID: 11,
     },
     {
@@ -84,6 +84,12 @@ export default function handler(req, res) {
       Imagen: '/ImagenesCursos/ExpressDesdeCero.png',
       TAGS: ['Javascript', 'BackEnd', 'Express', 'NodeJs', 'Servidores', 'Api'],
       ID: 13,
+    },
+    {
+      Titulo: 'Formularios con React js',
+      Imagen: '/ImagenesCursos/FormulariosReact.png',
+      TAGS: ['ReactJs', 'FrontEnd', 'Formularios', 'UI', 'UX/UI'],
+      ID: 14,
     },
   ]);
 }
