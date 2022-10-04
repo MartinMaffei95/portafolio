@@ -27,7 +27,7 @@ export default function handler(req, res) {
     },
     {
       Titulo: 'Flexbox Y Grid',
-      Imagen: '/ImagenesCursos/Flexboxgrid.ong',
+      Imagen: '/ImagenesCursos/Flexboxgrid.png',
       TAGS: ['Css', 'Diseño', 'FrontEnd', 'UX/UI'],
       ID: 4,
     },
