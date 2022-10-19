@@ -1,14 +1,12 @@
-import Typed from "typed.js";
-import { useEffect, useRef } from "react";
+import Typed from 'typed.js';
+import { useEffect, useRef } from 'react';
 
-const App = ()=>{
-  
+const App = () => {
   const elemento = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(elemento.current, {
-      strings: ["Liderazgo de Equipo", "Gestion de Datos", "Manejo de Costos"], 
-
+      strings: ['Liderazgo de Equipo', 'Gestion de Datos', 'Manejo de Costos'],
 
       startDelay: 100,
       typeSpeed: 70,
@@ -17,10 +15,9 @@ const App = ()=>{
       smartBackspace: true,
       loop: true,
       showCursor: true,
-      cursorChar: "_"
+      cursorChar: '_',
     });
 
-    
     return () => {
       typed.destroy();
     };
@@ -28,11 +25,16 @@ const App = ()=>{
 
   return (
     <div className="autoTextoContainer">
-      <h3 className="autoTexto"> Soy estudiante de <span className="autoTexto_accent">programacion</span> </h3>
+      <h3 className="autoTexto">
+        {' '}
+        Soy trainee en <span className="autoTexto_accent">
+          desarrollo web
+        </span>{' '}
+      </h3>
       <p className="autoTextoP">Cuento con experiencia en:</p>
       <span className="autoTextoTEXTO" ref={elemento}></span>
     </div>
   );
-}
+};
 
-export default App
+export default App;
