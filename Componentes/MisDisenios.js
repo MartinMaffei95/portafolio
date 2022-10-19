@@ -8,6 +8,13 @@ const MisDisenios = ({ proyectos }) => {
       </h2>
       <ul className="diseniosNav">
         <LinkDisenio
+          nombre="takeZoom"
+          descr="App para reservar espacios comunes de nuestro edificio"
+          tecUtil="NodeJs,Express,JWT,MongoDB,React,Redux,ReactRouterDOM"
+          url="https://takezoom.vercel.app/"
+          img="/designImages/takeZoom.png"
+        />
+        <LinkDisenio
           nombre="PostWeb"
           descr="Permite crear posts y compartirlos"
           tecUtil="NodeJs,Express,JWT,MongoDB,React,Redux,ReactRouterDOM"
