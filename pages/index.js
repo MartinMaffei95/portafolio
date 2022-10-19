@@ -12,6 +12,10 @@ const Home = ({ certificados, proyectos }) => {
         <meta charSet="utf-8" />
         <title> Portafolio | Martin Maffei</title>
         <link rel="shortcut icon" href="/static/medium.ico" />
+        <meta
+          name="google-site-verification"
+          content="kQCyfV4ZucwsahnLoMCgGrF45OFMD4zj3DksflAVHgo"
+        />
       </Helmet>
       <Header />
       <QuienSoy />
