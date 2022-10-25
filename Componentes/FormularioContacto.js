@@ -27,7 +27,6 @@ const FormularioContacto = ()=>{
                 console.log('FAILED...', error);
             })
 
-        console.log("Se eviaron ok")
         form.current.reset()
         toggleModal()
         }
