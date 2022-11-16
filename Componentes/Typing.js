@@ -28,7 +28,7 @@ const App = () => {
       <h3 className="autoTexto">
         {' '}
         Soy desarrollador <span className="autoTexto_accent">
-          Front-end
+          FullStack
         </span>{' '}
       </h3>
       <p className="autoTextoP">Cuento con experiencia en:</p>
