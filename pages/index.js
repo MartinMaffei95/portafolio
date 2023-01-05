@@ -16,6 +16,20 @@ const Home = ({ certificados, proyectos }) => {
           name="google-site-verification"
           content="kQCyfV4ZucwsahnLoMCgGrF45OFMD4zj3DksflAVHgo"
         />
+        {/* <!-- Google tag (gtag.js) --> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-GB53G4Q8Y0"
+        ></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-GB53G4Q8Y0'); 
+          `}
+        </script>
       </Helmet>
       <Header />
       <QuienSoy />
